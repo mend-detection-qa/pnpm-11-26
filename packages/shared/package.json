@@ -1,0 +1,14 @@
+{
+  "name": "@probe/shared",
+  "version": "1.0.0",
+  "description": "Shared library workspace package. Peer-depends on react.",
+  "main": "index.js",
+  "dependencies": {
+    "react": "catalog:",
+    "zod": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,12 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+
+catalog:
+  # Catalog entry that uses workspace: protocol — pnpm 11.26 feature.
+  # The value is a workspace: specifier; pnpm resolves it to the
+  # link: path of the matching workspace package in the lockfile.
+  "@probe/shared": "workspace:*"
+  # Plain registry catalog entries alongside the workspace: one.
+  react: "^18.3.1"
+  zod: "^3.23.8"

@@ -1,0 +1,6 @@
+{
+  "name": "probe-catalogs-workspace-deploy-v11_26",
+  "version": "0.0.0",
+  "private": true,
+  "description": "pnpm 11.26 probe: catalogs+workspace protocol, trust flags, deploy+inject+peer resolution"
+}

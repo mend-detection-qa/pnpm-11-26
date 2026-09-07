@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-09-07T12:00:00Z",
+  "packages": {
+    "@esbuild/linux-x64": {
+      "dependencies": [],
+      "group": "main",
+      "optional": true,
+      "source": "registry",
+      "source_detail": {
+        "integrity": "sha512-1rYdTpyv03iycF1+BhzrzQJCdOuAOtaqHTWJZCWvijKD2N5Xu0TtVC8/+1faWqcP9iBCWOmjmhoH94dH9QzRQ==",
+        "platform_constraint": "linux,x64"
+      },
+      "version": "0.21.5"
+    },
+    "@probe/consumer": {
+      "dependencies": [
+        "@probe/shared",
+        "esbuild"
+      ],
+      "group": "main",
+      "source": "local",
+      "source_detail": {
+        "workspace": "apps/consumer",
+        "workspace_protocol": "importer"
+      },
+      "version": "1.0.0"
+    },
+    "@probe/shared": {
+      "dependencies": [
+        "react",
+        "zod"
+      ],
+      "group": "main",
+      "source": "local",
+      "source_detail": {
+        "catalog": "default",
+        "catalog_specifier": "workspace:*",
+        "injected": true,
+        "link_path": "../../packages/shared",
+        "workspace": "packages/shared",
+        "workspace_protocol": "importer"
+      },
+      "version": "1.0.0"
+    },
+    "esbuild": {
+      "dependencies": [
+        "@esbuild/linux-x64"
+      ],
+      "group": "main",
+      "source": "registry",
+      "source_detail": {
+        "integrity": "sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE74+DiItV856Aixo34kqml6gDdPNQ==",
+        "trust_public_scripts": true
+      },
+      "version": "0.21.5"
+    },
+    "js-tokens": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "source_detail": {
+        "integrity": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
+      },
+      "version": "4.0.0"
+    },
+    "loose-envify": {
+      "dependencies": [
+        "js-tokens"
+      ],
+      "group": "main",
+      "source": "registry",
+      "source_detail": {
+        "integrity": "sha512-lyuxPGr/Wfhrlem2AB1k2L5AI4punGnfsa2RxTHFPxdHKh9RB5v/X0H9zYpjuTALCR3m1zGELJibKmYCnU3G=="
+      },
+      "version": "1.4.0"
+    },
+    "react": {
+      "dependencies": [
+        "loose-envify"
+      ],
+      "group": "main",
+      "source": "registry",
+      "source_detail": {
+        "catalog": "default",
+        "catalog_specifier": "^18.3.1",
+        "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+A=="
+      },
+      "version": "18.3.1"
+    },
+    "zod": {
+      "dependencies": [],
+      "group": "main",
+      "source": "registry",
+      "source_detail": {
+        "catalog": "default",
+        "catalog_specifier": "^3.23.8",
+        "integrity": "sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0ggante8KwE7VjCKIsOR3kWyfX35kUrqWD9ClomNT0v9g=="
+      },
+      "version": "3.23.8"
+    }
+  },
+  "pm": "pnpm",
+  "pm_version_tested": "9",
+  "pm_version_under_test": "11.26.0",
+  "root": {
+    "dependencies": [],
+    "name": "probe-catalogs-workspace-deploy-v11_26",
+    "version": "0.0.0"
+  },
+  "schema_version": "1.2",
+  "source_file": "pnpm-lock.yaml",
+  "warnings": [
+    "Workspace probe: root has no direct registry deps. Direct deps live in workspace importers packages/shared and apps/consumer.",
+    "Catalog entry '@probe/shared' uses workspace: protocol (value 'workspace:*'). Mend must resolve this through the catalog to link:../../packages/shared and report source='local', not source='registry'. If Mend reports source='registry' this is a detection bug.",
+    "Package esbuild@0.21.5 has postinstall lifecycle scripts (native binary selection). trust-public-scripts=true in .npmrc exercises pnpm 11.26 trust-flag behavior for pnpm remove/update. Flag does NOT change the dependency tree.",
+    "@probe/shared is injected (dependenciesMeta.injected=true) in apps/consumer. Under pnpm 11.26 injectWorkspacePackages+deploy, the injected copy carries its own peer graph. react@18.3.1 must appear as a dependency of @probe/shared in the tree.",
+    "@esbuild/linux-x64@0.21.5 is a platform-optional transitive of esbuild. It appears in the lockfile's snapshots section. Mend may omit it on non-Linux-x64 scan hosts; mark optional=true.",
+    "schema_version 1.2: pm_version_under_test='11.26.0' pins the exact pnpm version this probe targets. The .whitesource file pins the same version via install-tool versioning."
+  ]
+}
